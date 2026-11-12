@@ -1,4 +1,4 @@
-# Netease Playlist Downloader
+﻿# Netease Playlist Downloader
 
 Download every track of a **public NetEase Cloud Music playlist**: lossless FLAC first, 320 kbps MP3 as a fallback, named `Song - Artist`, ready for a NAS share.
 
@@ -38,7 +38,7 @@ cp config.example.toml config.toml   # set playlist_id and dest
 npdl run
 
 # or everything from the command line
-npdl run --playlist 16610553 --dest "D:/Music" --workers 4
+npdl run --playlist 3778678 --dest "D:/Music" --workers 4
 
 # fill gaps / upgrade MP3s to FLAC
 npdl retry

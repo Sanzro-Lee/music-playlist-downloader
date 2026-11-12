@@ -1,4 +1,4 @@
-# 网易云歌单无损下载器
+﻿# 网易云歌单无损下载器
 
 把网易云音乐**公开歌单**里的歌批量下载到本地：优先 FLAC 无损，找不到无损时自动回退 320k MP3，按「歌名 - 歌手」命名，可直接写进 NAS 共享目录。
 
@@ -74,7 +74,7 @@ cp config.example.toml config.toml
 ```
 
 ```toml
-playlist_id = "16610553"
+playlist_id = "3778678"
 dest = "//nas/Musics"   # 本地目录也可以，如 "D:/Music"
 workers = 4
 ```
@@ -88,13 +88,13 @@ npdl run
 也可以完全用命令行参数：
 
 ```bash
-npdl run --playlist 16610553 --dest "D:/Music" --workers 4
+npdl run --playlist 3778678 --dest "D:/Music" --workers 4
 ```
 
 先拿前 10 首试水：
 
 ```bash
-npdl run --playlist 16610553 --dest "D:/Music" --limit 10
+npdl run --playlist 3778678 --dest "D:/Music" --limit 10
 ```
 
 补漏（失败歌曲 + 把 MP3 升级为 FLAC）：
