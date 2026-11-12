@@ -105,6 +105,8 @@ def run(cfg: Config, refresh: bool = False) -> dict[str, int]:
 
     summary = store.summary()
     log.info("完成：%s（耗时 %.1f 分钟）", summary, (time.time() - started) / 60)
+    if summary.get("mp3") or summary.get("fail"):
+        log.info("提示：运行 npdl retry 可尝试把 MP3 / 失败项补成 FLAC")
     return summary
 
 

@@ -1,4 +1,4 @@
-﻿# Netease Playlist Downloader
+# Netease Playlist Downloader
 
 Download every track of a **public NetEase Cloud Music playlist**: lossless FLAC first, 320 kbps MP3 as a fallback, named `Song - Artist`, ready for a NAS share.
 
@@ -28,7 +28,7 @@ Built for playlists with hundreds to thousands of tracks: concurrent downloads, 
 git clone https://github.com/yourname/netease-playlist-downloader.git
 cd netease-playlist-downloader
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Usage

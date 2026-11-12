@@ -58,9 +58,12 @@ python -m venv .venv
 # Windows: .venv\Scripts\activate
 source .venv/bin/activate
 
-pip install -r requirements.txt
-# 或者安装为命令：pip install -e .
+pip install -e .          # 安装为命令 npdl
+# 或者只装依赖，用 python -m npdl 运行：
+# pip install -r requirements.txt
 ```
+
+> 没有安装命令时，把下文的 `npdl` 换成 `python -m npdl` 即可。
 
 ### 使用
 

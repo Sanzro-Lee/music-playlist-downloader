@@ -80,6 +80,8 @@ def main(argv: list[str] | None = None) -> int:
         cfg.workers = args.workers
     if getattr(args, "limit", None) is not None:
         cfg.limit = args.limit
+    cfg.dest = os.path.normpath(cfg.dest)
+    cfg.work_dir = os.path.normpath(cfg.work_dir)
 
     try:
         if args.command == "fetch":

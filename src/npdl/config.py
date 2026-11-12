@@ -28,14 +28,17 @@ class Config:
     ffprobe: str = "ffprobe"
     timeout: int = 90
     retries: int = 2
-    kuwo_fallback: bool = True
 
     @classmethod
     def load(cls, path: str | None = None) -> Config:
         cfg = cls()
-        candidates = [path] if path else ["config.toml", os.path.join("config", "config.toml")]
-        for candidate in candidates:
-            if candidate and os.path.exists(candidate):
+        if path:
+            if not os.path.exists(path):
+                raise ValueError(f"配置文件不存在: {path}")
+            cfg.apply(_read_toml(path))
+            return cfg
+        for candidate in ("config.toml", os.path.join("config", "config.toml")):
+            if os.path.exists(candidate):
                 cfg.apply(_read_toml(candidate))
                 break
         return cfg
@@ -58,5 +61,6 @@ class Config:
 def _read_toml(path: str) -> dict[str, Any]:
     if _toml is None:
         raise RuntimeError("当前 Python 无法解析 TOML，请升级到 3.11+ 或安装 tomli")
-    with open(path, "rb") as fh:
-        return _toml.load(fh)
+    # utf-8-sig：兼容 Windows 记事本 / VS Code 可能写入的 BOM
+    with open(path, encoding="utf-8-sig") as fh:
+        return _toml.loads(fh.read())
