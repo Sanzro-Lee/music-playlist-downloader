@@ -31,6 +31,11 @@ toml = ["tomli>=2.0; python_version < '3.11'"]
 [project.scripts]
 npdl = "npdl.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/Sanzro-Lee/music-playlist-downloader"
+Repository = "https://github.com/Sanzro-Lee/music-playlist-downloader"
+Issues = "https://github.com/Sanzro-Lee/music-playlist-downloader/issues"
+
 [tool.setuptools]
 package-dir = { "" = "src" }
 

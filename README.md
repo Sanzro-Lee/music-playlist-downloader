@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![CI](https://github.com/yourname/netease-playlist-downloader/actions/workflows/ci.yml/badge.svg)](https://github.com/yourname/netease-playlist-downloader/actions/workflows/ci.yml)
+[![CI](https://github.com/Sanzro-Lee/music-playlist-downloader/actions/workflows/ci.yml/badge.svg)](https://github.com/Sanzro-Lee/music-playlist-downloader/actions/workflows/ci.yml)
 
 > 仅用于个人备份学习，请支持正版音乐并遵守各平台服务条款。
 
@@ -51,8 +51,8 @@
 ### 安装
 
 ```bash
-git clone https://github.com/yourname/netease-playlist-downloader.git
-cd netease-playlist-downloader
+git clone git@github.com:Sanzro-Lee/music-playlist-downloader.git
+cd music-playlist-downloader
 
 python -m venv .venv
 # Windows: .venv\Scripts\activate

@@ -25,8 +25,8 @@ Built for playlists with hundreds to thousands of tracks: concurrent downloads, 
 ## Install
 
 ```bash
-git clone https://github.com/yourname/netease-playlist-downloader.git
-cd netease-playlist-downloader
+git clone git@github.com:Sanzro-Lee/music-playlist-downloader.git
+cd music-playlist-downloader
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
 ```
