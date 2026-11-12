@@ -1,0 +1,30 @@
+# è¿è¡Œäº§ç‰©
+work/
+output/
+downloads/
+*.log
+
+# æœ¬åœ°é…ç½®ä¸ç¼“å­˜
+config.toml
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ç³»ç»Ÿ
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ±¾µØÃ°ÑÌ²âÊÔ
+.smoke/
